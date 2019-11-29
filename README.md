@@ -1,5 +1,7 @@
 # Seeed_Arduino_RotaryEncoder
 
+This library support Encoder.
+
 Connect the Encoder to the D2 and D3 pins of the motherboard.You can use other pins if you want.  
 
 ### Software usage  
