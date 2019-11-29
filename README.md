@@ -10,7 +10,7 @@ Connect the Encoder to the D2 and D3 pins of the motherboard.You can use other p
 
 -Start a project.  
 
--Create the callback function and set the Encoder pin.(just set SIGA)
+-Create the callback function and set the Encoder pin.(just set SIGA.SIGB pin is equal to SIGA pin plus 1.)
 
    ```
    #include "GroveEncoder.h"
