@@ -46,7 +46,7 @@ Connect the Encoder to the D2 and D3 pins of the motherboard.You can use other p
           bt_flag = 1;
         }
    ```
-   Initialize the Encoder.The parameters are the SIGA pin and the callback function name, respectively.
+      Initialize the Encoder.The parameters are the SIGA pin and the callback function name, respectively.
    ```
       GroveEncoder myEncoder(2, &myCallback);
    ```
