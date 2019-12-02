@@ -19,7 +19,7 @@ Connect the Encoder to the D2 and D3 pins of the motherboard.You can use other p
    ```
       #include "GroveEncoder.h"
    ```
-   2. Create the callback function and initialize.The callback function gets the current Angle and the status of the button press.
+   2. Create the callback function.The callback function gets the current Angle and the status of the button press.
    Define a 'value' to determine whether the Angle value has changed.Define a 'bt_flag' to prevent the button value from being read    more than once.And set 'bt flag' to 1 in the while() function.You can also get the Angle value through the getValue() function.
    ```
       int value = 0;
@@ -47,7 +47,7 @@ Connect the Encoder to the D2 and D3 pins of the motherboard.You can use other p
         }
    ```
 
-Initialize the Encoder.The parameters are the SIGA pin and the callback function name, respectively.
+   3. Initialize the Encoder.The parameters are the SIGA pin and the callback function name, respectively.
    
    ```
       GroveEncoder myEncoder(2, &myCallback);
