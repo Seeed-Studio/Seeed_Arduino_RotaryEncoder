@@ -3,7 +3,13 @@
 
 This library support Encoder.
 
-Connect the Encoder to the D2 and D3 pins of the motherboard.You can use other pins if you want.  
+Connect the Encoder to the D2 and D3 pins of the motherboard.You can use other pins if you want.
+
+###  Usage
+
+   1.git clone this resp to your Arduino IDE'S libraries directory.
+
+   2.Run the demo "encoderTest" on examples directory.
 
 ### Software usage  
 
