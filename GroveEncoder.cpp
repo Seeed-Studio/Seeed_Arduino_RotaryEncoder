@@ -53,7 +53,7 @@ inline bool GroveEncoder::pushToQueue( unsigned char myValue )
 {
 	if ( queueIsFull() )
 	{
-		Serial.println( "Queue full, overwriting!" );
+		//Serial.println( "Queue full, overwriting!" );
 	}
 	pinDataQueue[INDEX_MASK( writeIndex )] = myValue;
 	writeIndex++;
@@ -81,7 +81,7 @@ inline unsigned char GroveEncoder::popFromQueue()
 		outValue = pinDataQueue[INDEX_MASK( readIndex )];
 		readIndex++;
 	} else {
-		Serial.println( "Popped from empty queue" );
+		//Serial.println( "Popped from empty queue" );
 	}
 	return(outValue);
 }
@@ -234,6 +234,8 @@ void GroveEncoder::processQueue()
 					/* failed to stay consistent! */
 					stage = STAGE_ZERO;
 				}
+			}else{
+				stage = STAGE_ZERO;
 			}
 			continue;
 
@@ -251,7 +253,7 @@ void GroveEncoder::processQueue()
 			continue;
 
 		default:
-			Serial.println( "Default is bad" );
+			//Serial.println( "Default is bad" );
 			DUMP_STATE();
 			break;
 		}
@@ -317,5 +319,3 @@ GroveEncoder::GroveEncoder( int pin, void(*optionalCallBack)(int, bool) )
 	attachInterrupt( digitalPinToInterrupt( LOW_PIN ), privateIntHandler, CHANGE );
 	attachInterrupt( digitalPinToInterrupt( HIGH_PIN ), privateIntHandler, CHANGE );
 }
-
-

@@ -20,8 +20,6 @@ public:
 	int getValue();
 	int button_flag;
 	void setValue( int newValue );
-
-
 	void resetValue();
 
 
