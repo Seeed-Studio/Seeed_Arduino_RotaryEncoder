@@ -1,12 +1,12 @@
 /**
- * GroveEncoder.h - Header for Grove Encoder library
- *
- * Copyright (C) 2016 David Antler
- * All rights reserved.
- *
- * This software may be modified and distributed under the terms
- * of the included license.  See the LICENSE file for details.
- */
+    GroveEncoder.h - Header for Grove Encoder library
+
+    Copyright (C) 2016 David Antler
+    All rights reserved.
+
+    This software may be modified and distributed under the terms
+    of the included license.  See the LICENSE file for details.
+*/
 
 #ifndef GROVE_ENCODER_LIB_H_
 #define GROVE_ENCODER_LIB_H_
@@ -15,41 +15,41 @@
 #define PIN_DATA_SIZE 128
 
 class GroveEncoder {
-public:
-	GroveEncoder( int pin, void (*optionalCallBack)( int, bool ) );
-	int getValue();
-	int button_flag;
-	void setValue( int newValue );
-	void resetValue();
+  public:
+    GroveEncoder(int pin, void (*optionalCallBack)(int, bool));
+    int getValue();
+    int button_flag;
+    void setValue(int newValue);
+    void resetValue();
 
 
-	/* This is private, but it needs to be public/static */
-	static void privateIntHandler();
+    /* This is private, but it needs to be public/static */
+    static void privateIntHandler();
 
 
-	void updateEncoderFast();
+    void updateEncoderFast();
 
 
-private:
-	int		LOW_PIN, HIGH_PIN;
-	volatile int	value;
-	int		readIndex;
-	int		writeIndex;
-	unsigned char	pinDataQueue[PIN_DATA_SIZE];
-	void		(*optCallBack)( int, bool );
-	inline bool pushToQueue( unsigned char myValue );
+  private:
+    int		LOW_PIN, HIGH_PIN;
+    volatile int	value;
+    int		readIndex;
+    int		writeIndex;
+    unsigned char	pinDataQueue[PIN_DATA_SIZE];
+    void	(*optCallBack)(int, bool);
+    inline bool pushToQueue(unsigned char myValue);
 
 
-	inline bool queueIsEmpty();
+    inline bool queueIsEmpty();
 
 
-	inline bool queueIsFull();
+    inline bool queueIsFull();
 
 
-	inline unsigned char popFromQueue();
+    inline unsigned char popFromQueue();
 
 
-	void processQueue();
+    void processQueue();
 };
 
 #endif
