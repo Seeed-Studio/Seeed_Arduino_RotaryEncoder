@@ -1,4 +1,4 @@
-# Seeed_Arduino_RotaryEncoder
+# Seeed_Arduino_RotaryEncoder  [![Build Status](https://travis-ci.com/Seeed-Studio/Seeed_Arduino_RotaryEncoder.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Seeed_Arduino_RotaryEncoder)
 
 ### Introduction
 
