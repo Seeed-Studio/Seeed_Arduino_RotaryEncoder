@@ -1,5 +1,9 @@
 #include "GroveEncoder.h"
 
+#ifdef USE_TINYUSB
+#include <Adafruit_TinyUSB.h>
+#endif
+
 int value = 0;
 int bt_flag = 0;
 void myCallback(int newValue, bool flag) {
